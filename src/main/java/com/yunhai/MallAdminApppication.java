@@ -4,7 +4,7 @@ package com.yunhai;
  * Hello world!
  *
  */
-public class App 
+public class MallAdminApppication
 {
     public static void main( String[] args )
     {
