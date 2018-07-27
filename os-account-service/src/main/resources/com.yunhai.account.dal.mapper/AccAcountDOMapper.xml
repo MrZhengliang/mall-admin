@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.yunhai.account.dal.mapper.AccAcountDOMapper">
+    <!-- 自动生成,请修改 OS_ACC_ACOUNT.xml -->
+    <resultMap id="BaseResultMap"  type="com.yunhai.account.common.model.account.AccAcountDO">
+            <id column="ID" property="id" jdbcType="BIGINT" javaType="Long"/>
+            <result column="PHONE" property="phone" jdbcType="VARCHAR" javaType="String"/>
+            <result column="EMAIL" property="email" jdbcType="VARCHAR" javaType="String"/>
+            <result column="PASSWORD" property="password" jdbcType="VARCHAR" javaType="String"/>
+            <result column="NICK_NAME" property="nickName" jdbcType="VARCHAR" javaType="String"/>
+            <result column="CREATE_TIME" property="createTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <result column="UPDATE_TIME" property="updateTime" jdbcType="TIMESTAMP" javaType="java.util.Date"/>
+            <result column="REMARK" property="remark" jdbcType="VARCHAR" javaType="String"/>
+            <result column="VERSION" property="version" jdbcType="INTEGER" javaType="Integer"/>
+            <result column="STATE" property="state" jdbcType="INTEGER" javaType="Integer"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        ID,PHONE,EMAIL,PASSWORD,NICK_NAME,CREATE_TIME,UPDATE_TIME,REMARK,VERSION,STATE
+    </sql>
+
+
+        <!--插入表:OS_ACC_ACOUNT-->
+        <insert id="insert" >
+                    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER">
+                SELECT
+                LAST_INSERT_ID()
+            </selectKey>
+        INSERT INTO OS_ACC_ACOUNT(
+            
+            PHONE
+            ,EMAIL
+            ,PASSWORD
+            ,NICK_NAME
+            ,CREATE_TIME
+            ,UPDATE_TIME
+            ,REMARK
+            ,VERSION
+            ,STATE
+        )VALUES(
+            
+            #{phone,jdbcType=VARCHAR}
+            ,#{email,jdbcType=VARCHAR}
+            ,#{password,jdbcType=VARCHAR}
+            ,#{nickName,jdbcType=VARCHAR}
+            ,#{createTime,jdbcType=TIMESTAMP}
+            ,#{updateTime,jdbcType=TIMESTAMP}
+            ,#{remark,jdbcType=VARCHAR}
+            ,#{version,jdbcType=INTEGER}
+            ,#{state,jdbcType=INTEGER}
+        )
+        </insert>
+
+        <!--更新表:OS_ACC_ACOUNT-->
+        <update id="update" >
+                    UPDATE /*MS-OS-ACC-ACOUNT-UPDATE*/ OS_ACC_ACOUNT
+            SET
+                    PHONE           = #{phone,jdbcType=VARCHAR}
+                    ,EMAIL           = #{email,jdbcType=VARCHAR}
+                    ,PASSWORD        = #{password,jdbcType=VARCHAR}
+                    ,NICK_NAME       = #{nickName,jdbcType=VARCHAR}
+                    ,CREATE_TIME     = #{createTime,jdbcType=TIMESTAMP}
+                    ,UPDATE_TIME     = #{updateTime,jdbcType=TIMESTAMP}
+                    ,REMARK          = #{remark,jdbcType=VARCHAR}
+                    ,VERSION         = #{version,jdbcType=INTEGER}
+                    ,STATE           = #{state,jdbcType=INTEGER}
+            WHERE
+                ID              = #{id,jdbcType=BIGINT}
+        </update>
+
+        <!--根据主键删除数据:OS_ACC_ACOUNT-->
+        <delete id="deleteByPrimary" >
+                    DELETE /*MS-OS-ACC-ACOUNT-DELETEBYPRIMARY*/ FROM OS_ACC_ACOUNT
+            WHERE
+                ID = #{id,jdbcType=BIGINT}
+        </delete>
+
+        <!--根据主键获取数据:OS_ACC_ACOUNT-->
+        <select id="getByPrimary" resultMap="BaseResultMap">
+                    SELECT /*MS-OS-ACC-ACOUNT-GETBYPRIMARY*/  <include refid="Base_Column_List" /> FROM OS_ACC_ACOUNT
+            WHERE
+                ID = #{id,jdbcType=BIGINT}
+        </select>
+
+        <select id="selectByExample" resultMap="BaseResultMap">
+
+            SELECT /*MS-OS-ACC-ACOUNT-GETBYPRIMARY*/  <include refid="Base_Column_List" /> FROM OS_ACC_ACOUNT
+            <where>
+                <if test="phone != null">
+                    AND phone = #{phone,jdbcType=VARCHAR}
+                </if>
+                <if test="password != null">
+                    AND password = #{password,jdbcType=VARCHAR}
+                </if>
+            </where>
+        </select>
+</mapper>
