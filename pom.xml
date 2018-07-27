@@ -13,6 +13,7 @@
         <module>os-payment-service</module>
         <module>os-msg-service</module>
         <module>os-base-service</module>
+        <module>common-module</module>
     </modules>
 
     <parent>
@@ -260,6 +261,12 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>2.6.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.yunhai</groupId>
+                <artifactId>common-module</artifactId>
+                <version>1.0-SNAPSHOT</version>
             </dependency>
 
         </dependencies>
