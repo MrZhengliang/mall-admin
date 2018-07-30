@@ -1,8 +1,7 @@
 package com.yunhai.account.dal.mapper;
 
 
-import com.yunhai.account.common.model.account.AccAccountCriteria;
-import com.yunhai.account.common.model.account.AccAcountDO;
+import com.yunhai.base.conf.model.account.AccAcountDO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

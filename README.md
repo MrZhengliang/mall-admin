@@ -3,6 +3,7 @@
 ####online-class程序实例
 #####1.springboot + springcloud + swagger2
 
+
 每个业务服务采用独立的MYSQL数据库，初期考虑用到如下组件：
 1. 服务注册、发现: eureka
 2. 配置管理:spring config , spring security
@@ -26,7 +27,7 @@
 | conf-server        |   9004   |   分布式配置中心，结合spring-security/rabbitmq同时使用   |
 | eureka-server        |    9003    |  服务注册中心，提供服务注册、发现功能  |
 | sleuth-server        |    9001    |  SpringCloud实现的一种分布式追踪解决方案，兼容Zipkin  |
-| zuul-server        |    9005    |  API网关模块  |
+| zuul-server        |    9005    |  zuul代理--API网关模块  |
 | os-account-service        |    8080    |  用户服务，提供注册、登录、地址等服务  |
 | os-product-service       |    8081    |  商品服务，提供商品列表、详情、库存更新等服务  |
 | os-payment-service    |    8082    |  支付服务，支付记录  |
@@ -43,7 +44,7 @@
 - 4、后续有时间再提供页面，基于VUE2+BOOTSTRAP，将流程串起来
 
 # 相关测试
-	1、启动基础eureka/config两个服务后，直接启动front-app服务，通过swagger测试商品列表或详情功能来测试hystrix的功能
+	1、启动基础os-base-service下面的eureka/config两个服务后，直接启动os-gateway-service服务，通过swagger测试商品列表或详情功能来测试hystrix的功能
 	1.1、启动hystrix-dashboard服务，输入监控地址http://localhost:8088/hystrix.stream可以查看监控视图
 	2、输入http://localhost:9005/account-service/acc/login?phone=123123&password=123123查看返回结果
 
@@ -58,4 +59,4 @@
 
 
 # 关注更多内容
-
+######借鉴项目地址:http://github.com/backkoms/simplemall

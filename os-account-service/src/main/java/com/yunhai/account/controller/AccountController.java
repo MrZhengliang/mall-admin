@@ -1,6 +1,6 @@
 package com.yunhai.account.controller;
 
-import com.yunhai.account.common.model.account.AccAcountDO;
+import com.yunhai.base.conf.model.account.AccAcountDO;
 import com.yunhai.account.service.IAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,6 @@
 package com.yunhai.account.service;
 
-import com.yunhai.account.common.model.account.AccAcountDO;
+import com.yunhai.base.conf.model.account.AccAcountDO;
 import com.yunhai.account.dal.mapper.AccAcountDOMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

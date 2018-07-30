@@ -1,6 +1,6 @@
 package com.yunhai.account.service;
 
-import com.yunhai.account.common.model.account.AccAcountDO;
+import com.yunhai.base.conf.model.account.AccAcountDO;
 
 /**
  * @author fuzl
