@@ -12,7 +12,6 @@ public class UUIdUtil {
 
     public static String next() {
         UUID u = UUID.randomUUID();
-//      return u.toString();
         return toIDString(u.getMostSignificantBits()) + toIDString(u.getLeastSignificantBits());
     }
 

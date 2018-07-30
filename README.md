@@ -28,6 +28,7 @@
 | eureka-server        |    9003    |  服务注册中心，提供服务注册、发现功能  |
 | sleuth-server        |    9001    |  SpringCloud实现的一种分布式追踪解决方案，兼容Zipkin  |
 | zuul-server        |    9005    |  zuul代理--API网关模块  |
+| hystrix-dashboard        |    9006    |  hystrix控制台模块  |
 | os-account-service        |    8080    |  用户服务，提供注册、登录、地址等服务  |
 | os-product-service       |    8081    |  商品服务，提供商品列表、详情、库存更新等服务  |
 | os-payment-service    |    8082    |  支付服务，支付记录  |
