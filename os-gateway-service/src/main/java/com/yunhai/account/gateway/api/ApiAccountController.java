@@ -1,10 +1,10 @@
-package com.yunhai.account.common.gateway.api;
+package com.yunhai.account.gateway.api;
 
 import com.alibaba.fastjson.JSONObject;
 import com.yunhai.account.common.model.Result;
-import com.yunhai.account.common.utils.uuid.UUIdUtil;
-import com.yunhai.account.common.gateway.client.AccountFeignClient;
 import com.yunhai.account.common.model.account.AccAcountDO;
+import com.yunhai.account.common.utils.uuid.UUIdUtil;
+import com.yunhai.account.gateway.client.AccountFeignClient;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;

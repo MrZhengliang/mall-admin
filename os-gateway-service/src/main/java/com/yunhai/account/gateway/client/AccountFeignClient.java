@@ -1,4 +1,4 @@
-package com.yunhai.account.common.gateway.client;
+package com.yunhai.account.gateway.client;
 
 import com.yunhai.account.common.model.account.AccAcountDO;
 import org.springframework.cloud.netflix.feign.FeignClient;
