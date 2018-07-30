@@ -11,11 +11,11 @@
 4. API网关: zuul
 5. 服务负载:feign+ribbon
 6. api文档输出:swagger2
-7. 代码简化:lombok
-8. 消息队列:rabbitmq
+7. 代码简化:lombok （待实现）
+8. 消息队列:rabbitmq（待实现）
 9. 分布式锁: redis （待实现）
-10. 链路跟踪:spring cloud sletuh ->zipkin
-11. 安全认证:oauth2/JWT(通过JWT轻量级的实现)
+10. 链路跟踪:spring cloud sletuh ->zipkin （待实现）
+11. 安全认证:oauth2/JWT(通过JWT轻量级的实现) （待实现）
 12. 服务监控:spring-boot-admin
 
 
@@ -47,7 +47,7 @@
 # 相关测试
 	1、启动基础os-base-service下面的eureka/config两个服务后，直接启动os-gateway-service服务，通过swagger测试商品列表或详情功能来测试hystrix的功能
 	1.1、启动hystrix-dashboard服务，输入监控地址http://localhost:8088/hystrix.stream可以查看监控视图
-	2、输入http://localhost:9005/account-service/acc/login?phone=123123&password=123123查看返回结果
+	2、输入http://localhost:9005/account-service/acc/login?phone=13811112222&password=123456&accessToken=at查看返回结果
 
 ## Release Version
 ### v1.0

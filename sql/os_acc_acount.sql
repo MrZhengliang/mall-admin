@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-07-27 11:22:22
+Date: 2018-07-30 17:00:44
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,8 +31,9 @@ CREATE TABLE `os_acc_acount` (
   `version` int(2) DEFAULT NULL,
   `state` int(2) DEFAULT NULL COMMENT '0：初始化；1：有效；2：禁用',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of os_acc_acount
 -- ----------------------------
+INSERT INTO `os_acc_acount` VALUES ('1', '13811112222', null, '123456', null, null, null, null, null, null);
